@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiEye, FiEyeOff, FiUser} from 'react-icons/fi';
 import logo from "./imgs/logonext.jpg"
 
 import './App.css';
@@ -26,20 +26,30 @@ function App() {
         <div className="Login__Container">
         
         <form action="#" method="POST" className='Form__container'>
-        <img src={logo} alt="Logo" />
+
+          <div className='Image__container'>
+            <img src={logo} alt="Logo" />
+            </div>
+
         <div  className="Input__container">
-        <input id="Username" type="text" placeholder="Username" required minLength={6} maxLength={16} title="El usuario debe tener al menos 6 Caracteres"></input><br/>
-        </div>
-        {/* <label htmlFor="Password"> Password:</label><br/> */}
-        <div className="Input__container">
-        <input type={showPassword ? 'text' : 'password'} id="Password" placeholder="Password" required title="This field is required, the password should has Numbers letters and special characters"minLength={6} maxLength={16}/>
+        <div className='user__logo__container'>
+        <input id="Username" type="text" placeholder="   Email" required minLength={6} maxLength={16} title="El usuario debe tener al menos 6 Caracteres"></input><br/>
+        <div className='user__logo'>
+          <FiUser/>
+          </div>
+          </div>
         
+        <div className='Input__password'>
+        <input type={showPassword ? 'text' : 'password'} id="Password" placeholder="   Password" required title="This field is required, the password should has Numbers letters and special characters"minLength={6} maxLength={16}/>
+        <div className='toggle__container'>
         <button id="showpassword" type="button" onClick={() => {
             togglePasswordVisibility();
             toggleCrossEye();
             }}>
               {crossEye ? <FiEye/> : <FiEyeOff/>}
               </button><br/>
+              </div>
+              </div>
         </div>
        
 
@@ -52,8 +62,11 @@ function App() {
          className={`Button ${isPressed ? 'buttonScaleAnimation' : ''}`}>
           Entrar
           </button>
-        
+         
         </div>
+        <div className='signup__container'>
+         <span ><a href='#' className='signup'>No Account? Sign up Here!</a></span>
+         </div>
         </form>
         </div>
       </header>

@@ -45,11 +45,11 @@ body{
 #login__button{
   font-size: larger;
   font-weight: 500;
-  width: 80%;
+  width: 100%;
   height: 48px;
   border-radius: 16px;
   border: none;
-  background-color: rgba(101, 83, 124, 0.8);
+  background-color: #65537ccc;
   color: #fff;
   box-shadow: inset 0px 0px 10px 2px rgba(73, 72, 73, 0.801);
   
@@ -60,21 +60,91 @@ body{
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
   opacity: 0.7;
 }
-/* @keyframes buttonScale {
-  0%{ transform: scale(1);}
-  50%{ transform: scale(1.2);}
-  100%{ transform:scale(1);}
-  
-} */
+
 .Image__container {
   position:absolute;
-  top: 30px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 280px;
 }
 img{
   width: 100%;
   height: auto;
 }
+.Input__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  
+}
+.Input__password{
+  position: relative;
+  display: flex;
+  
+}
+input{
+  /* display: flex;
+  position: relative; */
+  line-height: 48px;
+  padding: 0px 32px;
+  border-radius: 16px;
+  border: none;
+ font-weight: 600;
+ box-shadow: 
+   
+    inset 2px 2px 6px rgba(0, 0, 0, 0.349),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.842);
+    background-color: #E6EEF8;
+    opacity: 0.7;
+             
+}
 
+#showpassword{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+}
+.user__logo__container{
+  display: flex;
+  position: relative;
+  
+  padding-bottom: 24px;
+  
+  
+
+
+}
+.user__logo{
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  height: 16px;  
+  color: #666; 
+  height: 48px;
+  
+}
+.signup__container{
+position: absolute;
+top: 90%;
+left: 50%;
+transform: translateX(-50%);
+width: 250px;
+
+}
+.signup {
+  text-decoration: none;
+  color: #65537ccc;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.6;
+}
