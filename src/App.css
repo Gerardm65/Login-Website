@@ -34,6 +34,7 @@ body{
   text-align: center;
   position: relative;
   box-shadow: 20px 20px 700px rgb(235, 167, 167);
+  /* flex: 0 1 auto; */
 }
 .button__container{
   display: flex;
